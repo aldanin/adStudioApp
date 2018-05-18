@@ -1,38 +1,27 @@
 import * as React from 'react';
-import './index.css';
 
-import logo from '../../logo.svg';
+// import logo from '../../logo.svg';
 
-export interface Props {
-    name?: string;
-    enthusiasmLevel?: number;
-    onIncrement?: () => void;
-    onDecrement?: () => void;
+export interface HeaderComponentProps extends React.Props<HeaderComponent> {
+    name: string
 }
 
-function Hello({ name, enthusiasmLevel = 1, onDecrement, onIncrement }: Props) {
-    if (enthusiasmLevel <= 0) {
-        throw new Error('You could be a little more enthusiastic. :D');
+class HeaderComponent extends React.Component<HeaderComponentProps, {}> {
+    constructor (props: HeaderComponentProps) {
+        super(props)
+
+        this.state = {
+            ds: ''
+        }
     }
 
-    return (
-        <div className="hello">
-            <div className="greeting">
-                <img src={logo} className="hello-logo" alt="logo"/>
-                Hello {name + getExclamationMarks(enthusiasmLevel)}
-            </div>
-            <div>
-                <button onClick={onDecrement}>-</button>
-                <button onClick={onIncrement}>+</button>
-            </div>
-        </div>
-    );
+    render() {
+        return (
+      <div>
+          {this.props.name}
+      </div>
+        );
+    }
 }
 
-export default Hello;
-
-// helpers
-
-function getExclamationMarks(numChars: number) {
-    return Array(numChars + 1).join('!');
-}
+export default HeaderComponent;

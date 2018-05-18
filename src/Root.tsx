@@ -4,6 +4,7 @@ import * as React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'
 import * as Redux from 'redux'
 import Hello from './container/Hello'
+import Header from './components/header'
 // import Themed from './Themed'
 //
 // import routes from '../routes'
@@ -12,11 +13,15 @@ interface RootProps {
     store?: Redux.Store<any>;
     history?: any;
 }
-const Root: React.SFC<RootProps> = ({  }) => (
-    <Router>
-        <Header/>
-        <Hello />
-    </Router>
+
+const Root: React.SFC<RootProps> = ({}) => (
+    <div>
+        <Header name={'daadni'}/>
+        <Router>
+            <Hello/>
+        </Router>
+    </div>
+
 )
 
 export default Root
