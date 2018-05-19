@@ -1,9 +1,10 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom'
 
 // import logo from '../../logo.svg';
 
 export interface HeaderComponentProps extends React.Props<HeaderComponent> {
-    name: string
+
 }
 
 class HeaderComponent extends React.Component<HeaderComponentProps, {}> {
@@ -17,9 +18,14 @@ class HeaderComponent extends React.Component<HeaderComponentProps, {}> {
 
     render() {
         return (
-      <div>
-          {this.props.name}
-      </div>
+            <header>
+                <nav>
+                    <ul>
+                        <li><Link to="/studio">Studio</Link></li>
+                        <li><Link to="/synth">Synth</Link></li>
+                    </ul>
+                </nav>
+            </header>
         );
     }
 }

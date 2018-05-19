@@ -1,4 +1,4 @@
-import Hello from '../components/hello';
+import Synth from '../components/synth';
 import * as actions from '../actions/';
 import { StoreState } from '../types/index';
 import { connect, Dispatch } from 'react-redux';
@@ -19,4 +19,4 @@ export function mapDispatchToProps(dispatch: Dispatch<actions.EnthusiasmAction>)
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Hello);
+export default connect(mapStateToProps, mapDispatchToProps)(Synth);
