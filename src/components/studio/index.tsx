@@ -1,10 +1,11 @@
 import * as React from 'react';
 import './index.css';
+import StudioData from '../../types/Studio'
 
 import logo from '../../logo.svg';
 
 export interface StudioComponentProps extends React.Props<StudioComponent> {
-    name?: string;
+    studioData?: string;
     enthusiasmLevel?: number;
     onIncrement?: () => void;
     onDecrement?: () => void;

@@ -1,15 +1,20 @@
 import * as React from 'react'
-import Studio from '../components/studio';
+import StudioComponent from '../components/studio';
 import * as actions from '../actions/';
 import { StoreState } from '../types/index';
 import { connect, Dispatch } from 'react-redux';
+import styled from 'styled-components'
+import StudioData from '../types/Studio'
 
 export interface StudioContainerProps extends React.Props<StudioContainer> {
-    enthusiasmLevel: number,
-    name: string,
+    studioData: StudioData,
     onDecrement: () => void,
     onIncrement: () => void,
 }
+
+const Div = styled.div`
+    color: green;
+`;
 
 class StudioContainer extends React.Component<StudioContainerProps, {}> {
     constructor(props: StudioContainerProps) {
@@ -18,12 +23,16 @@ class StudioContainer extends React.Component<StudioContainerProps, {}> {
 
     render() {
         return (
-            <Studio
-                name={this.props.name}
-                enthusiasmLevel={this.props.enthusiasmLevel}
-                onDecrement={this.props.onDecrement}
-                onIncrement={this.props.onIncrement}
-            />
+            <>
+                <Div>
+                    <StudioComponent
+                        studioData={this.props.studioData}
+                        enthusiasmLevel={this.props.enthusiasmLevel}
+                        onDecrement={this.props.onDecrement}
+                        onIncrement={this.props.onIncrement}
+                    />
+                </Div>
+            </>
         )
     }
 }
