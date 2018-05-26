@@ -15,6 +15,7 @@ class AudioTrack extends React.PureComponent<AudioTrackProps, AudioTrackState> {
     };
 
     render() {
+        console.log('=>', this.props)
         return (
             <div>AudioTrack component</div>
         );

@@ -1,18 +1,16 @@
 import * as React from 'react';
-// import { Provider } from 'react-redux'
-
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import * as Redux from 'redux'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from './components/header'
-import Studio from './container/TransportContainer'
+import Studio from './components/studio'
 import Synth from './container/SynthContainer'
 // import Themed from './Themed'
 //
 // import routes from '../routes'
 
 interface RootProps {
-    store?: Redux.Store<any>;
-    history?: any;
+    // store?: Redux.Store<any>;
+    // history?: any;
 }
 
 const Root: React.SFC<RootProps> = ({}) => (

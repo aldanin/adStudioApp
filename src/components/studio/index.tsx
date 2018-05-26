@@ -2,7 +2,7 @@ import * as React from 'react';
 import './index.css';
 import StudioData from '../../types/Studio'
 import Transport from '../../container/TransportContainer'
-import Multitracker from './Multitracker'
+import Multitracker from '../../container/MultitrackerContainer'
 
 import logo from '../../logo.svg';
 // import MixerData from '../../types/Mixer';
@@ -18,7 +18,7 @@ class StudioComponent extends React.Component<StudioComponentProps, {}> {
     render() {
         return (
             <div>
-                {/*<Multitracker/>*/}
+                <Multitracker/>
                 <Transport/>
             </div>
         )

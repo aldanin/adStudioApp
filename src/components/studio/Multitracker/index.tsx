@@ -18,8 +18,9 @@ class MultitrackerComponent extends React.PureComponent<MultitrackerComponentPro
     render() {
         return (
             <div>
-                {this.props.data.map((audioTrackData, index) => {
-                    return <AudioTrack data={audioTrackData} key={index}/>
+                {this.props.data.map((audioTrackData) => {
+                    console.log('ddd', audioTrackData, audioTrackData.id)
+                    return <AudioTrack data={audioTrackData} key={audioTrackData.id}/>
                 })}
             </div>
         );

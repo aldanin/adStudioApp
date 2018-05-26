@@ -10,7 +10,7 @@ import Multitracker from '../components/studio/Multitracker'
 export interface MultitrackerContainerProps extends React.Props<MultitrackerContainer> {
     data: AudioTrackData[],
     isDataLoaded: boolean,
-    loadAudioTrackData: () => void,
+    loadAudioTrackData: (location: number) => void,
 }
 
 const Div = styled.div`
@@ -34,6 +34,10 @@ class MultitrackerContainer extends React.Component<MultitrackerContainerProps, 
                 data={this.props.data}
             />
         )
+    }
+
+    componentDidMount() {
+        this.props.loadAudioTrackData(0)
     }
 }
 
@@ -62,3 +66,4 @@ export function mapDispatchToProps(dispatch: any) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(MultitrackerContainer);
+// export default MultitrackerContainer;
