@@ -5,6 +5,7 @@
   "dependencies": {
     "@types/react-redux": "^6.0.0",
     "@types/react-router-dom": "^4.2.6",
+    "@types/webaudioapi": "0.0.27",
     "easytimer.js": "^2.2.1",
     "moment": "^2.22.1",
     "moment-duration-format": "^2.2.2",

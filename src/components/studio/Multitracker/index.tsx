@@ -32,6 +32,16 @@ class MultitrackerComponent extends React.PureComponent<MultitrackerComponentPro
         audioTracks: []
     };
 
+    private audioContext
+
+    componentDidMount() {
+
+    }
+
+    componentWillUnmount(){
+
+    }
+
     render() {
         return (
             <Container>
