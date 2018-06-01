@@ -18,6 +18,7 @@ const Container = styled.div`
     margin: auto;
     width: calc(100% - 20px);
     height: 100%;
+    border: outset 3px #bfbfbf;
 `;
 
 const MultiTracks = styled.div`
