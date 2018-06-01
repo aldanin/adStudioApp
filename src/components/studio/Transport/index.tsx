@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './index.css';
 import { TransportMode, TransportData } from '../../../types/Transport'
 import styled from 'styled-components'
 import * as moment from 'moment'

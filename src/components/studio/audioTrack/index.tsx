@@ -9,6 +9,11 @@ export interface AudioTrackProps extends React.Props<AudioTrack> {
 export interface AudioTrackState {
 }
 
+const Track = styled.div`
+    height: 80px;
+    border-bottom: solid #c7c7c7 1px;
+`;
+
 class AudioTrack extends React.PureComponent<AudioTrackProps, AudioTrackState> {
     static defaultProps = {
 
@@ -17,7 +22,7 @@ class AudioTrack extends React.PureComponent<AudioTrackProps, AudioTrackState> {
     render() {
         console.log('=>', this.props)
         return (
-            <div>AudioTrack component</div>
+            <Track>AudioTrack component</Track>
         );
     }
 }
