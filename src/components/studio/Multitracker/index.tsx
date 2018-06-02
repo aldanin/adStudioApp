@@ -38,7 +38,7 @@ class MultitrackerComponent extends React.PureComponent<MultitrackerComponentPro
 
     }
 
-    componentWillUnmount(){
+    componentWillUnmount() {
 
     }
 

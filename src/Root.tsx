@@ -5,6 +5,7 @@ import Header from './components/header'
 import Studio from './components/studio'
 import Synth from './container/SynthContainer'
 import styled from 'styled-components'
+import AudioContextContainer from './container/AudioContextContainer'
 // import Themed from './Themed'
 //
 // import routes from '../routes'
@@ -21,7 +22,7 @@ const Container = styled.div`
 `;
 
 const Root: React.SFC<RootProps> = ({}) => (
-    <Container>
+    <AudioContextContainer>
         <Router>
             <Container>
                 <Header/>
@@ -32,7 +33,7 @@ const Root: React.SFC<RootProps> = ({}) => (
                 </Switch>
             </Container>
         </Router>
-    </Container>
+    </AudioContextContainer>
 )
 
 export default Root
