@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import Root from './Root'
 import configureStore from './state/configureStore'
 
-const store = configureStore({})
+const store = configureStore({});
 
 ReactDOM.render(
     <Provider store={store}>

@@ -32,7 +32,7 @@ class MultitrackerComponent extends React.PureComponent<MultitrackerComponentPro
         audioTracks: []
     };
 
-    private audioContext
+    private audioContext = AudioContext;
 
     componentDidMount() {
 
