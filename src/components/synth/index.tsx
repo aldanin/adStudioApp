@@ -1,4 +1,6 @@
 import * as React from 'react';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField'
 
 // import logo from '../../logo.svg';
 
@@ -16,10 +18,21 @@ class SynthComponent extends React.Component<SynthComponentProps, {}> {
         }
     }
 
+    onClick = () => {
+        alert('CL')
+    }
+
     render() {
         return (
             <div>
-                Synth
+                <Button variant="raised" color="primary" onClick={this.onClick}>
+                    Hello World
+                </Button>
+                <TextField
+                    id="name"
+                    label="Name"
+                    margin="normal"
+                />
             </div>
         );
     }
